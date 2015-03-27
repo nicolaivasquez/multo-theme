@@ -1,0 +1,27 @@
+{{!< default}}
+
+<div class="masthead {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <div class="container">
+        <h2 class="masthead-title kilo">Concise Masthead Template</h2>
+
+        <p>This is a masthead template for the <a href="http://concisecss.com">Concise CSS framework</a> that can be easily copied and customized for projects.</p>
+
+        <a class="btn bg-blue btn-large">Read More</a>
+    </div>
+</div>
+
+<main class="siteContent container">
+    <div class="row gutters">
+
+        {{#foreach posts}}
+            <div class="column-8 {{post_class}}">
+                <h3><a href="{{url}}">{{{title}}}</a></h3>
+
+                <p>{{excerpt words="26"}}</p>
+
+                <a class="btn bg-small" href="{{url}}">Learn More &raquo;</a>
+            </div>
+        {{/foreach}}
+
+    </div>
+</main>
